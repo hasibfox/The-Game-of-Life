@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+body {
+    height: 100%;
+}
+.abs{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background: yellow;
+    z-index: 212;
+    overflow: hidden;
+}
+.abs audio {
+}
+.front {
+    background-image: radial-gradient(lightgreen, black);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.front h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    background:rgba(17, 17, 17, 0.123);
+    color:#fff;
+    animation: blinking 2s ease-in-out infinite alternate;
+}
+.front h2{ 
+    color:#fff;
+    animation: blinking 2s ease-in-out infinite alternate;
+    font-size: 33px;
+}   
+
+.brain {
+    height: auto;
+    width: 20vh;
+    margin-top: 5vh;
+    animation: rainbow 5s infinite;
+    cursor: pointer;
+}
+#text-allow{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#text-allow h3 {
+    cursor: pointer;
+    position: absolute;
+    font-size: 25px;
+    color: white;
+    margin-top: 10px;
+    margin-left: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: .5s ease-in-out;
+
+}
+#text-allow h3:hover{
+    text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;   
+}
+.sound{
+    position: absolute;
+    z-index: 2;
+    color: rgba(0, 0, 255, 0.336);
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 10vh;
+}
+.sound i {
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+section {
+    height: 100vh;
+    background-image: radial-gradient(green,black);
+    filter: blur(1);
+    color: whitesmoke;
+    width: 100%;
+}
+section h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 200;
+    font-size: 80px;
+    animation: blinking 3s ease-in-out infinite alternate;
+    text-align: center;
+    padding-top: 5vh;
+}
+section p {
+    font-family: 'Abel', sans-serif;
+    color: honeydew;
+    font-size: 20px;
+    padding: 10vh;
+}
+.tape {
+    position: absolute;
+    clip-path: polygon(100% 0, 83% 21%, 100% 42%, 87% 71%, 100% 100%, 0 100%, 17% 75%, 0 50%, 16% 24%, 0 0, 54% 0);
+    height: 10vh;
+    width: 100%;
+    background-image: radial-gradient(rgb(24, 6, 6), rgba(7, 134, 49, 0.041));
+    opacity: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5vh;
+}
+.tape i{
+    font-size: 50px;
+    width:auto;
+    color: rgba(255, 0, 0, 0.158);
+
+}
+
+@keyframes blinking {
+    0% {
+        text-shadow: none;   
+    }
+    100%{
+        text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;   
+    }
+}
+@keyframes rainbow {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg)
+    }
+}
+
