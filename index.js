@@ -24,12 +24,23 @@
 //   on.click()
 // }, 180000);
 let rain = document.getElementById("rainsounds")
+console.log(rain.muted)
+
+rain.mute
+
+function startSound(){
+  rain.muted = false;
+  console.log("sdfnsdi")
+}
+startSound();
 
 function pause(){
   if (rain.muted == false) {
     rain.muted = true;
     off.style.color="blue ";
     on.style.color="";
+    console.log("clicked", rain.muted)
+
   }
 }
 function play(){
@@ -37,5 +48,7 @@ function play(){
     rain.muted = false;
     on.style.color="blue ";
     off.style.color="";
+    console.log("clicked", rain.muted)
+
   }
 }
